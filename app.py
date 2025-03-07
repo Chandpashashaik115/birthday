@@ -3,13 +3,12 @@ import time
 from datetime import datetime
 import pytz
 
-# Set target date and time (March 7, 2025, 10:22 PM) in your local timezone
 local_tz = pytz.timezone('Asia/Kolkata')  # Replace with your local timezone
-target_date = local_tz.localize(datetime(2025, 3, 7, 22, 45, 0))
+target_date = local_tz.localize(datetime(2025, 3, 7, 22, 49, 0))
 
 # Get current time in local timezone
 now = datetime.now(pytz.utc).astimezone(local_tz)
-#st.write(f"Current time: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+# st.write(f"Current time: {now.strftime('%Y-%m-%d %H:%M:%S')}")
 
 # Function to calculate remaining time
 def get_time_left():
@@ -44,7 +43,7 @@ if 'show_personal_note' not in st.session_state:
 
 # Add a button for the personal note
 if st.button("📜 Personal Note"):
-    st.session_state.show_personal_note = True
+    st.session_state.show_personal_note = not st.session_state.show_personal_note
 
 # Display the personal note if the button was clicked
 if st.session_state.show_personal_note:
