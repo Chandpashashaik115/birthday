@@ -5,11 +5,11 @@ import pytz
 
 # Set target date and time (March 7, 2025, 10:22 PM) in your local timezone
 local_tz = pytz.timezone('Asia/Kolkata')  # Replace with your local timezone
-target_date = local_tz.localize(datetime(2025, 3, 7, 22, 22, 0))
+target_date = local_tz.localize(datetime(2025, 3, 7, 22, 31, 0))
 
 # Get current time in local timezone
 now = datetime.now(pytz.utc).astimezone(local_tz)
-st.write(f"Current time: {now.strftime('%Y-%m-%d %H:%M:%S')}")
+#st.write(f"Current time: {now.strftime('%Y-%m-%d %H:%M:%S')}")
 
 # Function to calculate remaining time
 def get_time_left():
