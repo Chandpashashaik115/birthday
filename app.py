@@ -4,6 +4,8 @@ from datetime import datetime
 
 # Set target date and time (March 7, 2025, 9:47 PM)
 target_date = datetime(2025, 3, 7, 22, 22, 00)
+st.write(f"Current time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
 
 # Function to calculate remaining time
 def get_time_left():
