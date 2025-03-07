@@ -1,15 +1,19 @@
 import streamlit as st
 import time
 from datetime import datetime
+import pytz
 
-# Set target date and time (March 7, 2025, 9:47 PM)
-target_date = datetime(2025, 3, 7, 22, 22, 00)
-st.write(f"Current time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+# Set target date and time (March 7, 2025, 10:22 PM) in your local timezone
+local_tz = pytz.timezone('Asia/Kolkata')  # Replace with your local timezone
+target_date = local_tz.localize(datetime(2025, 3, 7, 22, 22, 0))
 
+# Get current time in local timezone
+now = datetime.now(pytz.utc).astimezone(local_tz)
+st.write(f"Current time: {now.strftime('%Y-%m-%d %H:%M:%S')}")
 
 # Function to calculate remaining time
 def get_time_left():
-    now = datetime.now()
+    now = datetime.now(pytz.utc).astimezone(local_tz)
     remaining_time = target_date - now
     return remaining_time.total_seconds()
 
@@ -33,7 +37,6 @@ st.balloons()
 st.title("🎊 Happy Birthday Hema Sri! 🎂🥳")
 st.image("image.png", caption="🎊 My Sweet Heart🎂🥳")
 st.subheader("Wishing you lots of love, happiness, and success! ❤️")
-
 
 # Initialize session state for the personal note button
 if 'show_personal_note' not in st.session_state:
@@ -65,7 +68,6 @@ st.markdown("""
     </script>
     <canvas id="my-canvas"></canvas>
 """, unsafe_allow_html=True)
-
 
 # Add a button to play background music
 if st.button("🎵 Add Some Music Ammadu"):
