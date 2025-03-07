@@ -51,7 +51,7 @@ if st.session_state.show_personal_note:
     st.markdown("""
     <div style="border: 2px solid #f39c12; padding: 10px; border-radius: 10px; background-color: #f9e79f;">
         <h2 style="color: #d35400;">A Special Note for You</h2>
-        <p style="color: #6c3483;">Dear Hema Sri, (play music and start reading)</p>
+        <p style="color: #6c3483;">Dear Hema Sri,</p>
         <p style="color: #6c3483;">On this special day, I want to remind you how much you mean to me. Your presence brings joy and warmth to my life. May your birthday be filled with love, laughter, and unforgettable moments. Here's to many more wonderful years together!</p>
         <p style="color: #6c3483;">With all my love,</p>
         <p style="color: #6c3483;">Raayan</p>
