@@ -68,7 +68,3 @@ st.markdown("""
     </script>
     <canvas id="my-canvas"></canvas>
 """, unsafe_allow_html=True)
-
-# Add a button to play background music
-if st.button("🎵 Add Some Music Ammadu"):
-    st.audio("background_music.mp3", format="audio/mp3", start_time=0)
