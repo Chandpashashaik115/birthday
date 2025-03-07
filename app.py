@@ -4,7 +4,8 @@ from datetime import datetime
 import pytz
 
 local_tz = pytz.timezone('Asia/Kolkata')  # Replace with your local timezone
-target_date = local_tz.localize(datetime(2025, 3, 7, 22, 49, 0))
+target_date = local_tz.localize(datetime(2025, 3, 8, 0, 0, 0))
+
 
 # Get current time in local timezone
 now = datetime.now(pytz.utc).astimezone(local_tz)
